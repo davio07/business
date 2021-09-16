@@ -1,0 +1,150 @@
+*{
+  transition: all 0.5s;
+  font-family: ariel;
+  margin: 0px
+}
+html{
+  width: calc(100vw);
+  height: calc(100vh);
+  padding: 0;
+  margin: 0;
+  touch-action: none;
+  touch-action: pan-y
+}
+body{
+  width: calc(100%);
+  padding: 0px;
+  margin: 0;
+}
+header{
+	width: calc(100% - 40px);
+  padding: 20px;
+  background: royalblue;
+  color: white;
+  font-size: 2em
+}
+main{
+	width: calc(100% - 20px);
+  padding: 10px;
+}
+nav{
+	display: grid;
+	width: calc(100% - 40px);
+	padding: 20px;
+	box-shadow: 0px 1px 3px grey;
+}
+.button{
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	border-radius: 10px;
+	background: teal;
+	color: white
+}
+.label{
+	display:block;
+	padding:5px;
+	margin-top: 10px
+}
+#formContainer{
+	width: 350px
+}
+.input, .textarea, .source, .amount{
+	display:block;
+	width: calc(100% - 20px);
+	padding: 10px;
+	font-size: 19px;
+	margin: 5px auto;
+	box-shadow: 0px 1px 3px grey;
+}
+.source, .amount{
+	width: fit-content;
+	min-width: 20px;
+	display: inline-block;
+}
+.source:empty:before, .amount:empty:before{
+	content: attr(subtype);
+	color: grey
+}
+.textarea{
+	height: 200px;
+	font-family: ariel
+}
+#clientView{
+	overflow-x: scroll:
+	width: calc(100% - 20px);
+	padding: 10px
+}
+.clientBody{
+	display: flex;
+	flex-flow: row;
+	width: calc(100% - 20px);
+	align-items: center;
+	justify-content: stretch;
+	padding: 10px:
+	
+}
+.clientHeading{
+	display: flex;
+	color: white;
+	background:teal;
+	flex-flow: row;
+	width: calc(100% - 20px);
+	padding: 10px;
+	align-items: center;
+	justify-content: stretch;
+}
+.clientHeading > span, .clientBody > span{
+	padding:0;
+//	outline: 1px solid red;
+	padding: 10px;
+	justify-self: center;
+	text-align: left;
+	width: calc(50% - 20px);
+	height: fit-content;
+	word-break: break-all;
+	margin: 0
+}
+.clientBody > span:nth-of-type(even){
+	//outline: 1px solid red;
+	display: block;
+	text-align: center;
+	width: calc(40% - 20px);
+	font-size:small
+}
+.clientBody > span:nth-of-type(odd){
+	//outline: 1px solid red;
+	display: block;
+	width: calc(60% - 20px);
+}
+.clientBody > span:nth-of-type(odd) > span{
+	//outline: 1px solid red;
+	display:block;
+	padding: 5px 0;
+	font-size: smaller
+}
+.clientBody:nth-of-type(even){
+	background:gainsboro
+}
+.red{
+	color: white;
+	background: red;
+}
+#searchForm:empty:before{
+	content: "Enter Client's Name";
+	color: grey
+}
+#income:before, #expense:before, #diff::before{
+	content: "₦";
+	display: inline-block;
+	color: white;
+	background: green;
+	padding: 5px;
+	margin-right: 5px
+}
+.white{
+	margin-left: 50%;
+	color: grey;
+	background: white;
+	box-shadow: 0px 1px 3px grey;
+}
